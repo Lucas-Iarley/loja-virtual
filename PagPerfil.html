@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type ="text/css" href="C:\Users\Usuario\Downloads\documentos HTML\Projeto Loja virtual\Index.css"></link>
+	
+	
+	<title> Loja de Roupas</title>
+</head>
+<body>
+	<header> 
+		<div class='logo'>
+			<img src="./contents/logo.jpg">
+		</div>
+		<input type="text" name="search" placeholder="O que deseja ?">
+
+		<div class="opcoes">
+			<span>ATENDIMENTO</span>
+			<span> AJUDA</span>
+			 
+		</div>
+
+	</header>
+	<nav class="laterais">
+		
+	</nav>
+	
+	<section>
+		<form name="form1">
+			
+
+			<!--Entre para um nome para o cookie --->
+			<h3>Nome</h3>
+			<input type="text" name="Usuario" placeholder="Digite seu Nome">
+			<!--Entre com um valor para o cookie: --->
+			<h3>E-mail</h3>
+			<input type="text" name="valor" placeholder="Digite seu Email">
+
+			<h3>Sexo (Gênero)</h3>
+
+			<label id="radios">
+				<input type="radio" name="sexo"/>Masculino
+				     <input type="radio" name="sexo"/>Feminino
+			</label>
+			<h3>Senha</h3>
+			<input class="pwd" type="password" name="pwd" placeholder="Digite sua senha" >
+			<h3>Confirmar Senha</h3>
+			
+			<label id="ConfirmPWD">
+				<input class="pwdConfirm" type="password" name="pwd" placeholder="Confirme sua senha" >
+				<input type="checkbox" name="Mostrar"
+				value="Mostar senha" onclick="showorHide()">Mostrar senha
+			</label>
+			<input type="button" name="Gravar cookie" onclick="gravarCookie()" value="Cadastrar-se">
+			
+		</form>
+
+
+
+		
+	</section>
+
+	<aside class="laterais"></aside>
+<script type="text/javascript" src="./Index.js">
+		let status = false;
+	function showorHide(){
+			
+			var mostrar = document.querySelector('.pwd');  
+			var check = document.querySelector('.pwdConfirm');
+			if(status === false){
+				mostrar.setAttribute('type', 'text');
+				check.setAttribute('type', 'text');
+				status = true;
+			}else {
+			mostrar.setAttribute('type', 'password');
+			check.setAttribute('type', 'password');
+				status = false;
+			}
+		}
+	</script>
+</body>
+</html>
